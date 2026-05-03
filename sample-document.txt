@@ -1,0 +1,11 @@
+Azure AI Search is a cloud search service that allows developers to build search experiences over private documents and structured data.
+
+A Retrieval-Augmented Generation application uses a search system to retrieve relevant context before sending a request to a language model. This helps the model generate answers based on private or domain-specific information instead of relying only on general training data.
+
+Embeddings are numerical representations of text that allow applications to compare semantic similarity between a user question and document chunks. In a RAG architecture, documents are split into smaller chunks, embeddings are generated for each chunk, and those embeddings are stored in a vector index.
+
+When a user asks a question, the application creates an embedding for the question and searches for the most relevant document chunks using vector search. The retrieved chunks are then sent to the language model as context.
+
+Azure OpenAI can be used to generate embeddings and also to generate the final answer. Azure AI Search can store document chunks, metadata, and vector embeddings, enabling semantic and vector-based retrieval.
+
+A good RAG system should avoid inventing answers when the retrieved documents do not contain enough information. Instead, it should clearly explain that the available context is insufficient.
